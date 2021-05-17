@@ -1,0 +1,16 @@
+[Unit]
+Description=Wahoowa Twitter bot
+After=network.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/wahoowa
+Restart=on-failure
+RestartSec=5s
+Environment=TWITTER_CONSUMER_KEY=
+Environment=TWITTER_CONSUMER_SECRET=
+Environment=TWITTER_ACCESS_TOKEN=
+Environment=TWITTER_ACCESS_TOKEN_SECRET=
+
+[Install]
+WantedBy=multi-user.target
